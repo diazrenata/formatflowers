@@ -191,7 +191,7 @@
 \newcounter{figCount}%      This is an internal counter to track how many figures
 \setcounter{figCount}{1}%   We will start at 1 due to how stepping it works.
 
-\newcommand{\addFigure}[3][\Alph{figCount}]{%   Command to manually add a figure
+\newcommand{\addFigure}[3][]{%   Command to manually add a figure
     \parbox{#2\textwidth}{\centering #1 \\ \includegraphics[width=#2\textwidth]{#3}}
     \stepcounter{figCount}
     }
