@@ -7,50 +7,42 @@ In order to calculate energetic compensation and the total energy ratio, we requ
 
 \subsection{Compensation}
 
-\subsubsection{Model specification and selection}
 
 We fit linear mixed-effects models (using the $lme$ function in the R package $nlme$; \cite{pinheiro2020}) of the form $compensation = time period$ with a random effect of plot and temporal autocorrelation structure to account for autocorrelation between monthly census periods within each time period. We compared these to models without the autocorrelation structure, without the random effect, and without the term for time period. The best-fitting model included terms for time period, random effect of plot, and autocorrelation.
 
 \subsection{Total energy use}
 
-\subsubsection{Model specification and selection}
 
 As for compensation, we fit linear mixed-effects models fitting $total energy ratio = time period$ with a random effect of plot and a temporal autocorrelation term to account for autocorrelation between monthly census periods within each timeperiod. We compared these to models without the autocorrelation term, without the random effect, and without the term for time period. The best-fitting model included terms for time period, random effect of plot, and autocorrelation.
 
 
 
-\subsection{Kangaroo rat proportional energy use}
+\subsection{\textit{Dipodomys} proportional energy use}
 
-\subsubsection{Model specification and selection}
 
 To compare proportional energy use across time periods, we used binomial generalized linear mixed models (using the glmer function in the R package \textit{lme4}; Bates (2015)), which allowed us to include a random effect of plot.
 
 For \textit{Dipodomys} proportional energy use, we compared models with and without the random effect of plot and with and without a term for timeperiod. The best-fitting model included terms for timeperiod and a random effect of plot.
 
- 
-\subsection{C. baileyi proportional energy use}
-
-\subsubsection{Model specification and selection}
+\subsection{\textit{C. baileyi} proportional energy use}
 
 As for kangaroo rat proportional energy use, we used a binomial generalized linear mixed effects model to compare \textit{C. baileyi} proportional energy use across time periods. Because \textit{C. baileyi} occurs on both control and exclosure plots, we investigated whether the dynamics of \textit{C. baileyi}’s proportional energy use differed between treatment types. We compared models incorporating separate slopes, separate intercepts, or no terms for treatment modulating the change in \textit{C. baileyi} proportional energy use across time periods, i.e. comparing the full set of models:
 
--	$cbaileyi proportional energy use = timeperiod + treatment + timeperiod:treatment$
+-	\textit{c baileyi proportional energy use = timeperiod + treatment + timeperiod:treatment}
 
--	$cbaileyi proportional energy use = timeperiod + treatment$
+-\textit{c baileyi proportional energy use = 1}
 
--	$cbaileyi proportional energy use = timeperiod$
-
+-	\textit{c baileyi proportional energy use = timeperiod}
 We also tested a null (intercept-only) model of no change across time periods:
 
--	$cbaileyi proportional energy use = 1$
+- \textit{c baileyi proportional energy use = 1}
 
 We compared all of these models with and without a random effect of plot.
-We found that the best-fitting model incorporated a random effect of plot, and fixed effects for time period and for treatment, but no interaction between them ($cbaileyi proportional energy use = timeperiod + treatment$). We therefore proceeded with this model.
+We found that the best-fitting model incorporated a random effect of plot, and fixed effects for time period and for treatment, but no interaction between them (\textit{c baileyi proportional energy use = 1}). We therefore proceeded with this model.
 
+\subsection{ Tables}
 
-\subsection{Tables}
-
-\begin{table}[htbp]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
+\begin{table}[H]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
      \captionof{table}{Plot-level:  Model comparison for compensation.}\label{first}
     \begin{tabularx}{\textwidth}{XX}
       \hline
@@ -67,7 +59,7 @@ We found that the best-fitting model incorporated a random effect of plot, and f
 \end{table}
 
 
-\begin{table}[htbp]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
+\begin{table}[H]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
      \captionof{table}{Plot-level:  Coefficients from linear mixed-effects model for compensation.}\label{first}
     \begin{tabularx}{\textwidth}{XXXXXX}
       \hline
@@ -81,7 +73,7 @@ oera.Q &	-0.2845830 &	0.0341063 &	1362 &	-8.343990 &	0.0000000 \\
 \end{table}
 
 
-\begin{table}[htbp]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
+\begin{table}[H]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
      \captionof{table}{Plot-level:  Estimates from linear mixed-effects model for compensation.}\label{first}
     \begin{tabularx}{\textwidth}{XXXXXX}
       \hline
@@ -94,7 +86,7 @@ oera.Q &	-0.2845830 &	0.0341063 &	1362 &	-8.343990 &	0.0000000 \\
     \end{tabularx}
 \end{table}
 
-\begin{table}[htbp]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
+\begin{table}[H]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
      \captionof{table}{Plot-level:  Contrasts from linear mixed-effects model for compensation.}\label{first}
     \begin{tabularx}{\textwidth}{XXXXXX}
       \hline
@@ -104,12 +96,12 @@ oera.Q &	-0.2845830 &	0.0341063 &	1362 &	-8.343990 &	0.0000000 \\
       1988-1997 - 2010-2020	& -0.0923609 &	0.0527944	& 1362	& -1.749446	& 0.1873 \\
         1997-2010 - 2010-2020	& 0.3023610	& 0.0496411	& 1362	& 6.090948	& 0.0000 \\
       \hline
-    \end{tabularx}
+     \end{tabularx}
 \end{table}
 
 
 
-\begin{table}[htbp]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
+\begin{table}[H]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
      \captionof{table}{Plot-level:  Model comparison for total energy use.}\label{first}
     \begin{tabularx}{\textwidth}{XX}
       \hline
@@ -127,7 +119,7 @@ oera.Q &	-0.2845830 &	0.0341063 &	1362 &	-8.343990 &	0.0000000 \\
 
 
 
-\begin{table}[htbp]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
+\begin{table}[H]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
      \captionof{table}{Plot-level:  Coefficients from linear mixed-effects model for total energy ratio.}\label{first}
     \begin{tabularx}{\textwidth}{XXXXXX}
       \hline
@@ -141,7 +133,7 @@ oera.Q &	-0.2845830 &	0.0341063 &	1362 &	-8.343990 &	0.0000000 \\
 \end{table}
 
 
-\begin{table}[htbp]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
+\begin{table}[H]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
      \captionof{table}{Plot-level:  Estimates from linear mixed-effects model for total energy ratio.}\label{first}
     \begin{tabularx}{\textwidth}{XXXXXX}
       \hline
@@ -156,7 +148,7 @@ oera.Q &	-0.2845830 &	0.0341063 &	1362 &	-8.343990 &	0.0000000 \\
 
 
 
-\begin{table}[htbp]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
+\begin{table}[H]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
      \captionof{table}{Plot-level:  Contrasts from linear mixed-effects model for total energy ratio.}\label{first}
     \begin{tabularx}{\textwidth}{XXXXXX}
       \hline
@@ -170,7 +162,7 @@ oera.Q &	-0.2845830 &	0.0341063 &	1362 &	-8.343990 &	0.0000000 \\
 \end{table}
 
 
-\begin{table}[htbp]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
+\begin{table}[H]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
      \captionof{table}{Plot-level:  Model comparison for kangaroo rat proportional energy use.}\label{first}
     \begin{tabularx}{\textwidth}{XX}
       \hline
@@ -185,7 +177,7 @@ oera.Q &	-0.2845830 &	0.0341063 &	1362 &	-8.343990 &	0.0000000 \\
 \end{table}
 
 
-\begin{table}[htbp]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
+\begin{table}[H]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
      \captionof{table}{Plot-level:  Coefficients from GLMER on kangaroo rat energy use.}\label{first}
     \begin{tabularx}{\textwidth}{XXXXX}
      \hline
@@ -199,7 +191,7 @@ oera.Q &	-0.2845830 &	0.0341063 &	1362 &	-8.343990 &	0.0000000 \\
 \end{table}
 
 
-\begin{table}[htbp]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
+\begin{table}[H]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
      \captionof{table}{Plot-level:  Estimates from GLMER on kangaroo rat energy use.}\label{first}
     \begin{tabularx}{\textwidth}{XXXXXX}
       \hline
@@ -215,7 +207,7 @@ Timeperiod &	prob &	SE &	df &	asymp.LCL &	asymp.UCL  \\
 
 
 
-\begin{table}[htbp]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
+\begin{table}[H]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
      \captionof{table}{Plot-level:  Contrasts from GLMER on kangaroo rat energy use.}\label{first}
     \begin{tabularx}{\textwidth}{XXXXXX}
       \hline
@@ -225,11 +217,11 @@ Comparison &	estmimate &	SE &	df &	z.ratio &	p.value \\
 1988-1997 - 2010-2020	& 0.2025545	& 0.0217545	& Inf	& 9.3109407 &	0 \\
 1997-2010 - 2010-2020	& -0.0002191	& 0.0278048	& Inf	& -0.0078811 &	1 \\
 \hline
-    \end{tabularx}
+     \end{tabularx}
 \end{table}
 
 
-\begin{table}[htbp]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
+\begin{table}[H]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
      \captionof{table}{Plot-level:  Model comparison for \textit{C. baileyi} proportional energy use.}\label{first}
     \begin{tabularx}{\textwidth}{XX}
       \hline
@@ -248,7 +240,7 @@ Comparison &	estmimate &	SE &	df &	z.ratio &	p.value \\
 \end{table}
 
 
-\begin{table}[htbp]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
+\begin{table}[H]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
      \captionof{table}{Plot-level:  Coefficients from GLMER on \textit{C. baileyi} energy use.}\label{first}
     \begin{tabularx}{\textwidth}{XXXXX}
      \hline
@@ -262,7 +254,7 @@ Comparison &	estmimate &	SE &	df &	z.ratio &	p.value \\
 \end{table}
 
 
-\begin{table}[htbp]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
+\begin{table}[H]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
      \captionof{table}{Plot-level:  Estimates from GLMER on \textit{C. baileyi} energy use.}\label{first}
     \begin{tabularx}{\textwidth}{XXXXXXX}
       \hline
@@ -279,27 +271,561 @@ Timeperiod & Treatment &	prob &	SE &	df &	asymp.LCL &	asymp.UCL  \\
 
 
 
-\begin{table}[htbp]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
+\begin{table}[H]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
      \captionof{table}{Plot-level:  Contrasts from GLMER on \textit{C. baileyi} energy use.}\label{first}
-    \begin{tabularx}{\textwidth}{XXXXXX}
+    \begin{tabularx}{\textwidth}{XXXXXXX}
       \hline
-Comparison & Treatment &	estmimate &	SE &	df &	z.ratio &	p.value \\
+Comparison & Treatment &	estimate &	SE &	df &	z.ratio &	p.value \\
 \hline
 1997-2010 - 2010-2020 &	Control &	2.639326 &	0.2163843 &	Inf &	12.1974	& 0 \\
 1997-2010 - 2010-2020 &	Exclosure &	2.639326 &	0.2163843 &	Inf	& 12.1974 &	0 \\
 \hline
-    \end{tabularx}
+ \end{tabularx}
 \end{table}
 
 \section{Full model results}
 
+\subsection{Compensation}
+
+We fit a generalized least squares (of the form $compensation = timeperiod$; note that “timeperiod” is coded as “oera” throughout) using the $gls$ function from the R package $nlme$ \cite{pinheiro2020}. Because values from monthly censuses within each time period are subject to temporal autocorrelation, we included a continuous autoregressive temporal autocorrelation structure of order 1 (using the $CORCAR1$ function). We compared this model to models fit without the autocorrelation structure and without the time period term using AIC. The model with both the time period term and the autocorrelation structure was the best-fitting model via AIC, and we used this model to calculate estimates and contrasts using the package \textit{emmeans} \cite{lenth2021}.
+
+\subsection{Total energy use ratio}
+
+As for compensation, we fit a generalized least squares of the form \textit{total energy ratio = timeperiod}, accounting for temporal autocorrelation between monthly censuses within each time period using a continuous autoregressive autocorrelation structure of order 1. We compared this model to models fit without the timeperiod term and/or autocorrelation structure, and found the full (timeperiod plus autocorrelation) model had the best performance via AIC. We used this model for estimates and contrasts.
+
+\subsection{\textit{Dipodomys} proportional energy use}
+
+
+Proportional energy use is bounded 0-1 and cannot be fit with generalized least squares. We therefore used a binomial generalized linear model of the form \textit{Dipodomys proportional energy use = timeperiod}. We compared a model fit with a timeperiod term to an intercept-only (null) model using AIC, and found the timeperiod term improved model fit. We used this model for estimates and contrasts.
+
+Note that we were unable to incorporate temporal autocorrelation into generalized linear models, and we prioritized fitting models of the appropirate family over accounting for autocorrelation. Due to the pronounced differences between time periods for these variables, we were comfortable proceeding without explicitly accounting for autocorrelation.
+
+\subsection{\textit{C. baileyi} proportional energy use}
+
+
+As for kangaroo rat proportional energy use, we used a binomial generalized linear model to compare \textit{C. baileyi} proportional energy use across time periods. Because \textit{C. baileyi} occurs on both control and exclosure plots, we investigated whether the dynamics of \textit{C. baileyi}’s proportional energy use differed between treatment types. We compared models incorporating separate slopes, separate intercepts, or no terms for treatment modulating the change in \textit{C. baileyi} proportional energy use across time periods, i.e. comparing the full set of models:
+
+-	\textit{c baileyi proportional energy use = timeperiod + treatment + timeperiod:treatment}
+
+-	\textit{c baileyi proportional energy use = timeperiod + treatment}
+
+-	\textit{c baileyi proportional energy use = timeperiod}
+We also tested a null (intercept-only) model of no change across time periods:
+
+- \textit{c baileyi proportional energy use = 1}
+
+We found that the best-fitting model incorporated effects for time period and for treatment, but no interaction between them (\textit{c baileyi proportional energy use = timeperiod + treatment}). We therefore proceeded with this model.
+
+\subsection{Tables}
+
+\begin{table}[H]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
+     \captionof{table}{Model comparison for compensation.}\label{first}
+    \begin{tabularx}{\textwidth}{XX}
+      \hline
+      Model specification & AIC \\
+      \hline
+      intercept + timeperiod + autocorrelation	& 69.85023 \\
+intercept + autocorrelation	& 84.74902 \\
+intercept + timeperiod &	157.09726 \\
+intercept	& 252.74534 \\
+      \hline
+    \end{tabularx}
+\end{table}
+
+
+\begin{table}[H]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
+     \captionof{table}{Coefficients from GLS model for compensation.}\label{first}
+    \begin{tabularx}{\textwidth}{XXXXX}
+      \hline
+       & Value & Std.Error &  t-value & p-value \\
+      \hline
+(Intercept) &	0.3450313 &	0.0294996 &	11.696141 &	0.0000000 \\
+oera.L &	0.0647933 &	0.0524103 &	1.236269	& 0.2172146 \\
+oera.Q &	-0.2833553 &	0.0477359 &	-5.935890 &	0.0000000 \\
+      \hline
+    \end{tabularx}
+\end{table}
+
+\begin{table}[H]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
+     \captionof{table}{Estimates from GLS for compensation.}\label{first}
+    \begin{tabularx}{\textwidth}{XXXXXX}
+      \hline
+        Timeperiod &	emmean &	SE &	df &	lower.CL &	upper.CL\\
+      \hline
+1988-1997 &	0.1835362 &	0.0520378 &	44.11081 &	0.0786683 &	0.2884041 \\
+1997-2010  &	0.5763899 &	0.0462641 &	47.37851 &	0.4833383 &	0.6694416 \\
+2010-2020 &	0.2751677 &	0.0528010 &	46.75897 &	0.1689314 &	0.3814041 \\
+      \hline
+    \end{tabularx}
+\end{table}
+
+
+\begin{table}[H]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
+     \captionof{table}{Contrasts from GLS for compensation.}\label{first}
+    \begin{tabularx}{\textwidth}{XXXXXX}
+      \hline
+        Comparison &	estimate &	SE &	df &	t.ratio &	p.value \\
+      \hline
+1988-1997 - 1997-2010 &	-0.3928537 &	0.0689413 &	47.89422 &	-5.698378 &	0.0000 \\
+1988-1997 - 2010-2020 &	-0.0916315 &	0.0741194 &	45.51740 &	-1.236269 &	0.4383 \\
+1997-2010 - 2010-2020 &	0.3012222 &	0.0694989 &	49.52957 &	4.334200 &	0.0002 \\
+      \hline
+     \end{tabularx}
+\end{table}
+
+
+
+
+
+
+\begin{table}[H]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
+     \captionof{table}{Model comparison for total energy use.}\label{first}
+    \begin{tabularx}{\textwidth}{XX}
+      \hline
+      Model specification & AIC \\
+      \hline
+     intercept + timeperiod + autocorrelation &	-132.92138 \\
+intercept + autocorrelation &	-118.15000 \\
+intercept + timeperiod &	13.29396 \\
+intercept &	156.85988 \\
+      \hline
+    \end{tabularx}
+\end{table}
+
+
+\begin{table}[H]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
+     \captionof{table}{Coefficients from GLS for total energy ratio.}\label{first}
+    \begin{tabularx}{\textwidth}{XXXXXX}
+      \hline
+       & Value & Std.Error  & t-value & p-value \\
+      \hline
+        (Intercept) &	0.5016731 &	0.0271176 &	18.499880 &	0.0000000 \\
+oera.L	& 0.1413504	& 0.0477646 &	2.959316 &	0.0033001 \\
+oera.Q	& -0.2503659	& 0.0429312 &	-5.831790 &	0.0000000 \\
+      \hline
+    \end{tabularx}
+\end{table}
+
+
+\begin{table}[H]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
+     \captionof{table}{Estimates from GLS for total energy ratio.}\label{first}
+    \begin{tabularx}{\textwidth}{XXXXXX}
+      \hline
+        Timeperiod &	emmean &	SE &	df &	lower.CL &	upper.CL\\
+      \hline
+       1988-1997 &	0.2995118 &	0.0475806 &	36.19943 &	0.2030323 &	0.3959913 \\
+1997-2010 &	0.7060960 &	0.0419773 &	38.51943 &	0.6211550 &	0.7910369 \\
+2010-2020 &	0.4994115 &	0.0480066 &	37.62774 &	0.4021956 &	0.5966274 \\
+      \hline
+    \end{tabularx}
+\end{table}
+
+
+
+\begin{table}[H]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
+     \captionof{table}{Contrasts from GLS for total energy ratio.}\label{first}
+    \begin{tabularx}{\textwidth}{XXXXXX}
+      \hline
+        Comparison &	estimate &	SE &	df &	t.ratio &	p.value\\
+      \hline 
+1988-1997 - 1997-2010 &	-0.4065842 &	0.0623398 &	40.51631 &	-6.522060 &	0.0000 \\
+1988-1997 - 2010-2020 &	-0.1998997 &	0.0675493 &	37.12310 &	-2.959316 &	0.0144 \\
+1997-2010 - 2010-2020 &	0.2066845 &	0.0626456 &	41.44768 &	3.299267 &	0.0056 \\
+      \hline
+     \end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\captionof{table}{Model comparison for kangaroo rat proportional energy use.}\label{first}
+\begin{tabularx}{\textwidth}{XX}
+\hline 
+Model specification    & AIC \\ 
+\hline
+intercept + timeperiod &	258.3581\\
+intercept &	280.8497 \\
+\hline
+\end{tabularx}
+\end{table}
+
+
+\begin{table}[H]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
+     \captionof{table}{Coefficients from GLM on kangaroo rat energy use.}\label{first}
+    \begin{tabularx}{\textwidth}{XXXXX}
+     \hline
+       & Estimate & Std. Error & z.value & $Pr(>|z|)$ \\
+     \hline
+(Intercept) &	1.4032480 &	0.1503201	& 9.335068 &	0.0000000 \\
+oera.L &	-1.1000833 &	0.2871738 &	-3.830723	& 0.0001278 \\
+oera.Q &	0.5855493 &	0.2304516 &	2.540878	& 0.0110574 \\
+      \hline
+    \end{tabularx}
+\end{table}
+
+
+\begin{table}[H]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
+     \captionof{table}{Estimates from GLM on kangaroo rat energy use.}\label{first}
+    \begin{tabularx}{\textwidth}{XXXXXX}
+      \hline
+Timeperiod &	prob &	SE &	df &	asymp.LCL &	asymp.UCL  \\
+\hline
+1988-1997 &	0.9183528 &	0.0256462 &	Inf &	0.8680872 &	0.9686183 \\
+1997-2010 &	0.7160901 &	0.0398537 &	Inf	& 0.6379782 &	0.7942020 \\
+2010-2020 &	0.7035835 &	0.0456677 &	Inf	& 0.6140765 &	0.7930905 \\
+\hline
+    \end{tabularx}
+\end{table}
+
+
+
+
+\begin{table}[H]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
+     \captionof{table}{Contrasts from GLM on kangaroo rat energy use.}\label{first}
+    \begin{tabularx}{\textwidth}{XXXXXX}
+      \hline
+Comparison &	estimate &	SE &	df &	z.ratio &	p.value \\
+\hline
+1988-1997 - 1997-2010	& 1.4950249	& 0.3942281	& Inf	& 3.7922836 &	0.0004 \\
+1988-1997 - 2010-2020	& 1.5557527	& 0.4061251	& Inf	& 3.8307227 &	0.0004 \\
+1997-2010 - 2010-2020	& 0.0607279	& 0.2938992	& Inf	& 0.2066282 &	0.9767 \\
+\hline
+     \end{tabularx}
+\end{table}
+
+
+
+\begin{table}[H]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
+     \captionof{table}{ Model comparison for \textit{C. baileyi} proportional energy use.}\label{first}
+    \begin{tabularx}{\textwidth}{XX}
+      \hline
+      Model specification & AIC \\
+      \hline
+    intercept + timeperiod + treatment + timeperiod:treatment &	237.7643 \\
+intercept + timeperiod + treatment	& 231.0963 \\
+intercept + timeperiod &	460.8477 \\
+intercept &	541.3799 \\
+      \hline
+    \end{tabularx}
+\end{table}
+
+
+
+\begin{table}[H]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
+     \captionof{table}{Coefficients from GLM on \textit{C. baileyi} energy use.}\label{first}
+    \begin{tabularx}{\textwidth}{XXXXX}
+     \hline
+       & Estimate & Std. Error & z.value & $Pr(>|z|)$ \\
+     \hline
+     (Intercept) &	-1.574028 &	0.1670168 &	-9.424368 &	0 \\
+oera.L	& -1.409273 &	0.2010398 &	-7.009921 &	0 \\
+oplottype.L	 & 2.184896 &	0.2267112 &	9.637355 &	0 \\
+      \hline
+    \end{tabularx}
+\end{table}
+
+
+\begin{table}[H]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
+     \captionof{table}{Estimates from GLM on \textit{C. baileyi} energy use.}\label{first}
+    \begin{tabularx}{\textwidth}{XXXXXXX}
+      \hline
+Timeperiod & Treatment &	prob &	SE &	df &	asymp.LCL &	asymp.UCL  \\
+\hline
+1997-2010 &	Control &	0.1069314 &	0.0258894 &	Inf &	0.0561890 &	0.1576737 \\
+1997-2010 &	Exclosure &	0.7246076 &	0.0385129 &	Inf &	0.6491236 &	0.8000915 \\
+2010-2020 &	Control &	0.0160560 &	0.0058224 &	Inf &	0.0046444 &	0.0274676 \\
+2010-2020 &	Exclosure &	0.2639419 &	0.0428458 &	Inf &	0.1799657 &	0.3479181 \\
+\hline
+    \end{tabularx}
+\end{table}
+
+
+
+
+\begin{table}[H]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
+     \captionof{table}{Contrasts from GLM on \textit{C. baileyi} energy use.}\label{first}
+    \begin{tabularx}{\textwidth}{XXXXXXX}
+      \hline
+Comparison & Treatment &	estimate &	SE &	df &	z.ratio &	p.value \\
+\hline
+1997-2010 - 2010-2020 &	Control &	1.993013 &	0.2843132 &	Inf	& 7.009921 &	0 \\
+1997-2010 - 2010-2020 &	Exclosure &	1.993013 &	0.2843132 &	Inf &	7.009921 &	0 \\
+\hline
+ \end{tabularx}
+\end{table}
+
+
 \section{Biomass analysis}
+
+\subsection{Compensation}
+
+We fit a generalized least squares (of the form $compensation = timeperiod$; note that “timeperiod” is coded as “oera” throughout) using the $gls$ function from the R package $nlme$ \cite{pinheiro2020}. Because values from monthly censuses within each time period are subject to temporal autocorrelation, we included a continuous autoregressive temporal autocorrelation structure of order 1 (using the $CORCAR1$ function). We compared this model to models fit without the autocorrelation structure and without the time period term using AIC. The model with both the time period term and the autocorrelation structure was the best-fitting model via AIC, and we used this model to calculate estimates and contrasts using the package \textit{emmeans} \cite{lenth2021}.
+
+\subsection{Total biomass ratio}
+
+As for compensation, we fit a generalized least squares of the form \textit{total energy ratio = timeperiod}, accounting for temporal autocorrelation between monthly censuses within each time period using a continuous autoregressive autocorrelation structure of order 1. We compared this model to models fit without the timeperiod term and/or autocorrelation structure, and found the full (timeperiod plus autocorrelation) model had the best performance via AIC. We used this model for estimates and contrasts.
+
+\subsection{\textit{Dipodomys} proportional biomass}
+
+
+Proportional biomass is bounded 0-1 and cannot be fit with generalized least squares. We therefore used a binomial generalized linear model of the form \textit{Dipodomys proportional biomass = timeperiod}. We compared a model fit with a timeperiod term to an intercept-only (null) model using AIC, and found the timeperiod term improved model fit. We used this model for estimates and contrasts.
+
+Note that we were unable to incorporate temporal autocorrelation into generalized linear models, and we prioritized fitting models of the appropirate family over accounting for autocorrelation. Due to the pronounced differences between time periods for these variables, we were comfortable proceeding without explicitly accounting for autocorrelation.
+
+\subsection{\textit{C. baileyi} proportional biomass}
+
+
+As for kangaroo rat proportional biomass, we used a binomial generalized linear model to compare \textit{C. baileyi} proportional biomass across time periods. Because \textit{C. baileyi} occurs on both control and exclosure plots, we investigated whether the dynamics of \textit{C. baileyi}’s proportional biomass differed between treatment types. We compared models incorporating separate slopes, separate intercepts, or no terms for treatment modulating the change in \textit{C. baileyi} proportional biomass across time periods, i.e. comparing the full set of models:
+  
+  -	\textit{c baileyi proportional biomass = timeperiod + treatment + timeperiod:treatment}
+
+-	\textit{c baileyi proportional biomass = timeperiod + treatment}
+
+-	\textit{c baileyi proportional biomass = timeperiod}
+We also tested a null (intercept-only) model of no change across time periods:
+  
+  - \textit{c baileyi proportional biomass = 1}
+
+We found that the best-fitting model incorporated effects for time period and for treatment, but no interaction between them (\textit{c baileyi proportional biomass = timeperiod + treatment}). We therefore proceeded with this model.
+
+\subsection{Tables}
+
+\begin{table}[H]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
+\captionof{table}{Model comparison for compensation.}\label{first}
+\begin{tabularx}{\textwidth}{XX}
+\hline
+Model specification & AIC \\
+\hline
+intercept + timeperiod + autocorrelation	&-17.623354\\
+intercept + autocorrelation	&-3.297103 \\
+intercept + timeperiod &	92.184205 \\
+intercept	& 207.804481\\
+\hline
+\end{tabularx}
+\end{table}
+
+
+\begin{table}[H]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
+\captionof{table}{Coefficients from GLS model for compensation.}\label{first}
+\begin{tabularx}{\textwidth}{XXXXX}
+\hline
+& Value & Std.Error &  t-value & p-value \\
+\hline
+(Intercept) &	0.3081443 &	0.0290539 &	10.605950 &	0.0000000 \\
+oera.L &	0.0711412 &	0.0514131 &	1.383719 &	0.1673549 \\
+oera.Q &	-0.2799121 &	0.0465252 &	-6.016352 &	0.000000 \\
+
+\hline
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
+\captionof{table}{Estimates from GLS for compensation.}\label{first}
+\begin{tabularx}{\textwidth}{XXXXXX}
+\hline
+Timeperiod &	emmean &	SE &	df &	lower.CL &	upper.CL\\
+\hline
+1988-1997 & 0.1435663 & 0.0511419 & 39.28312 & 0.0401458 & 0.2469867 \\
+1997-2010 & 0.5366915 & 0.0452745 & 41.91562 & 0.4453185 & 0.6280646 \\
+2010-2020 & 0.2441751 & 0.0517205 & 41.17937 & 0.1397373 & 0.3486130 \\
+\hline
+\end{tabularx}
+\end{table}
+
+
+\begin{table}[H]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
+\captionof{table}{Contrasts from GLS for compensation.}\label{first}
+\begin{tabularx}{\textwidth}{XXXXXX}
+\hline
+Comparison &	estimate &	SE &	df &	t.ratio &	p.value \\
+\hline
+1988-1997 - 1997-2010 & -0.3931253 & 0.0673811 & 43.22895 & -5.834358 & 0.0000 \\
+1988-1997 - 2010-2020 & -0.1006089 & 0.0727090 & 40.36882 & -1.383719 & 0.3588 \\
+1997-2010 - 2010-2020 & 0.2925164 & 0.0678003 & 44.43055 & 4.314383 & 0.0003 \\
+\hline
+\end{tabularx}
+\end{table}
+
+
+\begin{table}[H]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
+\captionof{table}{Model comparison for total biomass.}\label{first}
+\begin{tabularx}{\textwidth}{XX}
+\hline
+Model specification & AIC \\
+\hline
+intercept + timeperiod + autocorrelation & -176.57761 \\
+intercept + autocorrelation & -162.61339 \\
+intercept + timeperiod & -15.98438 \\ 
+intercept & 146.61442 \\
+\hline
+\end{tabularx}
+\end{table}
+
+
+\begin{table}[H]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
+\captionof{table}{Coefficients from GLS for total biomass ratio.}\label{first}
+\begin{tabularx}{\textwidth}{XXXXXX}
+\hline
+& Value & Std.Error  & t-value & p-value \\
+\hline
+(Intercept) & 0.4553971 & 0.0272418 & 16.716827 & 0.0000000 \\
+oera.L & 0.1454493 & 0.0477989 & 3.042941 & 0.0025257 \\
+oera.Q & -0.2531409 & 0.0427343 & -5.923594 & 0.0000000 \\
+\hline
+\end{tabularx}
+\end{table}
+
+
+\begin{table}[H]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
+\captionof{table}{Estimates from GLS for total biomass ratio.}\label{first}
+\begin{tabularx}{\textwidth}{XXXXXX}
+\hline
+Timeperiod &	emmean &	SE &	df &	lower.CL &	upper.CL\\
+\hline
+1988-1997 & 0.2492046 & 0.0476584 & 33.82432 & 0.1523326 & 0.3460765 \\
+1997-2010 & 0.6620857 & 0.0419515 & 35.98516 & 0.5770030 & 0.7471684 \\
+2010-2020 & 0.4549009 & 0.0480215 & 34.98703 & 0.3574107 & 0.5523911 \\
+
+\hline
+\end{tabularx}
+\end{table}
+
+
+
+\begin{table}[H]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
+\captionof{table}{Contrasts from GLS for total biomass ratio.}\label{first}
+\begin{tabularx}{\textwidth}{XXXXXX}
+\hline
+Comparison &	estimate &	SE &	df &	t.ratio &	p.value\\
+\hline 
+1988-1997 - 1997-2010 & -0.4128811 & 0.0621739 & 38.42746 & -6.640747 & 0.0000 \\
+1988-1997 - 2010-2020 & -0.2056963 & 0.0675979 & 34.67694 & -3.042941 & 0.0121 \\
+1997-2010 - 2010-2020 & 0.2071848 & 0.0624325 & 39.20390 & 3.318542 & 0.0054 \\
+\hline
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\captionof{table}{Model comparison for kangaroo rat proportional biomass.}\label{first}
+\begin{tabularx}{\textwidth}{XX}
+\hline 
+Model specification    & AIC \\ 
+\hline
+intercept + timeperiod & 215.2069 \\
+intercept & 227.9608 \\
+\hline
+\end{tabularx}
+\end{table}
+
+
+\begin{table}[H]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
+\captionof{table}{Coefficients from GLM on kangaroo rat biomass.}\label{first}
+\begin{tabularx}{\textwidth}{XXXXX}
+\hline
+& Estimate & Std. Error & z.value & $Pr(>|z|)$ \\
+\hline
+(Intercept) & 1.6149566 & 0.1644937 & 9.817741 & 0.0000000 \\
+oera.L & -1.1672395 & 0.3180813 & -3.669626 & 0.0002429 \\
+oera.Q & 0.6619048 & 0.2473324 & 2.676175 & 0.0074468 \\
+\hline
+\end{tabularx}
+\end{table}
+
+
+\begin{table}[H]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
+\captionof{table}{Estimates from GLM on kangaroo rat biomass.}\label{first}
+\begin{tabularx}{\textwidth}{XXXXXX}
+\hline
+Timeperiod &	prob &	SE &	df &	asymp.LCL &	asymp.UCL  \\
+\hline
+1988-1997 & 0.9376458 & 0.0226460 & Inf & 0.8932605 & 0.9820310 \\
+1997-2010 & 0.7454543 & 0.0385025 & Inf & 0.6699909 & 0.8209177 \\
+2010-2020 & 0.7426552 & 0.0437171 & Inf & 0.6569713 & 0.8283392 \\
+\hline
+\end{tabularx}
+\end{table}
+
+
+
+
+\begin{table}[H]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
+\captionof{table}{Contrasts from GLM on kangaroo rat biomass.}\label{first}
+\begin{tabularx}{\textwidth}{XXXXXX}
+\hline
+Comparison &	estimate &	SE &	df &	z.ratio &	p.value \\
+\hline
+1988-1997 - 1997-2010 & 1.6360275 & 0.4372643 & Inf & 3.741508 & 0.0005 \\
+1988-1997 - 2010-2020 & 1.6507259 & 0.4498349 & Inf & 3.669626 & 0.0007 \\
+1997-2010 - 2010-2020 & 0.0146984 & 0.3057707 & Inf & 0.048070 & 0.9987 \\
+\hline
+\end{tabularx}
+\end{table}
+
+
+
+\begin{table}[H]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
+\captionof{table}{ Model comparison for \textit{C. baileyi} proportional biomass.}\label{first}
+\begin{tabularx}{\textwidth}{XX}
+\hline
+Model specification & AIC \\
+\hline
+intercept + timeperiod + treatment + timeperiod:treatment & 237.6847 \\
+intercept + timeperiod + treatment & 231.2374 \\
+intercept + timeperiod & 466.4937 \\
+intercept + treatment & 346.2154 \\
+intercept & 543.7811 \\
+\hline
+\end{tabularx}
+\end{table}
+
+
+
+\begin{table}[H]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
+\captionof{table}{Coefficients from GLM on \textit{C. baileyi} biomass.}\label{first}
+\begin{tabularx}{\textwidth}{XXXXX}
+\hline
+& Estimate & Std. Error & z.value & $Pr(>|z|)$ \\
+\hline
+(Intercept) & -1.538798 & 0.1671239 & -9.207525 & 0 \\
+oera.L & -1.403286 & 0.2006948 & -6.992140 & 0 \\
+oplottype.L & 2.270657 & 0.2298594 & 9.878462 & 0 \\
+\hline
+\end{tabularx}
+\end{table}
+
+
+\begin{table}[H]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
+\captionof{table}{Estimates from GLM on \textit{C. baileyi} biomass.}\label{first}
+\begin{tabularx}{\textwidth}{XXXXXXX}
+\hline
+Timeperiod & Treatment &	prob &	SE &	df &	asymp.LCL &	asymp.UCL  \\
+\hline
+1997-2010 & Control & 0.1041331 & 0.0255800 & Inf & 0.0539971 & 0.1542691 \\
+1997-2010 & Exclosure & 0.7425132 & 0.0376727 & Inf & 0.6686761 & 0.8163504 \\
+2010-2020 & Control & 0.0157248 & 0.0057341 & Inf & 0.0044861 & 0.0269634 \\
+2010-2020 & Exclosure & 0.2838438 & 0.0439192 & Inf & 0.1977637 & 0.3699240 \\
+\hline
+\end{tabularx}
+\end{table}
+
+
+
+
+\begin{table}[H]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
+\captionof{table}{Contrasts from GLM on \textit{C. baileyi} biomass.}\label{first}
+\begin{tabularx}{\textwidth}{XXXXXXX}
+\hline
+Comparison & Treatment &	estimate &	SE &	df &	z.ratio &	p.value \\
+\hline
+1997-2010 - 2010-2020 & Control & 1.984546 & 0.2838253 & Inf & 6.99214 & 0 \\
+1997-2010 - 2010-2020 & Exclosure & 1.984546 & 0.2838253 & Inf & 6.99214 & 0 \\
+\hline
+\end{tabularx}
+\end{table}
 
 \section{Covariates of rodent community change}
 
 \chapter{Secondary Appendix Content}
 
-\begin{table}[htbp]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
+\begin{table}[H]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
     \captionof{table}{A sample Table using tabularx}\label{first}
     \begin{tabularx}{6.5in}{XXX}
       \hline
