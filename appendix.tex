@@ -839,32 +839,167 @@ Comparison & Treatment &	estimate &	SE &	df &	z.ratio &	p.value \\
 
 Figures and tables from the main analysis, restricted to 199 routes with perfect temporal coverage (i.e. no missing time steps). All results are qualitatively the same as for the main analysis (739 routes, with a minimum of 27 of 30 time steps sampled for each route).
 
+\subsection{Figures}
+
+\begin{figure}[H]
+\begin{center}
+\addFigure{.6}{./graphics/appendixBF1.png} 
+\captionof{figure}[Direction and magnitude of long-term trends]{Histograms showing the direction and magnitude of long-term trends for the individuals-driven (null-model; left) and observed (right) changes in biomass (A) and energy use (B), for communities with a significant slope and/or interaction term (for biomass, 141/199 routes; for energy use, 137/199 routes; Table B-1). Change is summarized as the ratio of the fitted value for the last year in the time series to the fitted value for the first year in the timeseries from the best-fitting model for that community. Values greater than 1 (vertical black line) indicate increases in total energy or biomass over time, and less than 1 indicate decreases. The individuals-driven dynamics (left) reflect the trends fit for the null model, while the observed dynamics (right) reflect trends incorporating both change in total abundance and change in the size structure over time. For communities best-described by syndromes of “coupled trends” or “no directional change”, the “individuals-driven” and “observed” ratios will be the same; for communities with “decoupled trends”, there will be different ratios for or “individuals-driven” and “observed” dynamics.
+
+Among routes with temporal trends (“coupled trends” or “decoupled trends”), there are qualitatively different continental-wide patterns in individuals-driven and observed dynamics for total biomass and total energy use. 76\% of trends in individuals-driven (null model) dynamics for energy use are decreasing, and 72\% for biomass (Table B-2). For biomass, observed dynamics are balanced evenly between increases (50\% of routes) and decreases (50\%) - indicating that changes in the size structure produce qualitatively different long-term trends for biomass than would be expected given abundance changes alone. However, trends for energy use (which scales nonlinearly with biomass) are dominated by decreases (69\% of routes), more closely mirroring the trends expected given changes in individual abundance alone.
+}
+\end{center}
+\end{figure}
 
 
-\section{}
 
-\begin{table}[H]% Fix the table captions to sit directly on the table, but figures do NOT sit directly on the figure.
-    \captionof{table}{A sample Table using tabularx}\label{first}
-    \begin{tabularx}{6.5in}{XXX}
-      \hline
-      First & Second & Third \\
-      \hline
-      12 & 45 & 26 \\
-      17 & 32 & 93 \\
-      text & 51 & can be there too. \\	
-      \hline
-    \end{tabularx}
+
+\begin{figure}[H]
+\begin{center}
+\addFigure{.6}{./graphics/appendixBF2.png} 
+\captionof{figure}[Compositional change]{Histograms of (A) change in mean body size from the first to the last five years of monitoring, (B) overall change in the size structure, and (C) change in species composition for routes whose dynamics for total biomass were best-described using no temporal trend (bottom row; intercept-only model), separate trends for observed and individuals-driven dynamics (middle row), or the same trend for observed and individuals-driven dynamics (top row). Change in mean body size (A) is calculated as the ratio of the mean body size of all individuals observed in the last 5 years of the timeseries relative to the mean body size of all individuals observed in the first 5 years. Overall change in the ISD (B) is calculated as the degree of turnover between the ISDs for the first and last five years of the timeseries (see text). Change in species composition (C) is Bray-Curtis dissimilarity comparing species composition in the first five years to the last five years.
+}
+\end{center}
+\end{figure}
+
+\subsection{Tables}
+
+
+\begin{table}[H]
+\caption[A proper table caption location]{The number and proportion of routes whose dynamics for total biomass and total energy use are best described by the following syndromes: no directional change (intercept-only model, \textit{biomass = 1} or \textit{energy use = 1}); a coupled trend (\textit{biomass = year} or \textit{energy use = year}); or a model with decoupled temporal trends for observed and individuals-driven dynamics (\textit{biomass = year * dynamics} or \textit{energy use = year * dynamics}, where \textit{dynamics} refers to observed or null model, individuals-driven dynamics).
+
+}
+%\begin{center}
+\begin{tabularx}{\textwidth}{XXXX}
+\hline Currency & Selected model & Number of routes & Proportion of routes \\
+\hline
+Total biomass & Intercept-only & 58 & 0.29 \\
+Total biomass & Trend, not decoupled & 86 & 0.43 \\
+Total biomass & Decoupled trend & 55 & 0.28 \\
+Total energy use & Intercept-only & 62 & 0.31 \\
+Total energy use & Trend, not decoupled & 115 & 0.58 \\
+Total energy use & Decoupled trend & 22 & 0.11 \\
+\hline
+\end{tabularx}
+%\end{center}
+
 \end{table}
 
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[scale=.2]{graphics/theworld.png}
-    \caption[Figure Caption]{This is a long caption to make sure that the caption in the list-of section is correctly single space with the blank white line between captions. }
-    \label{fig:my_label}
-\end{figure}
 
-Test for second appendix file.
+\begin{table}[H]
+\caption[A proper table caption location]{The proportion of trends that are increasing (specifically, for which the ratio of the last fitted value to the first fitted value > 1) for individuals-driven and observed dynamics, for routes exhibiting temporal trends (“coupled trends” or “decoupled trends”) in total biomass and total energy use. Trends that are not increasing are decreasing.
+}
+%\begin{center}
+\begin{tabularx}{\textwidth}{XXXX}
+\hline Currency & Proportion of increasing individuals-driven trends & Proportion of increasing observed trends & Number of routes with temporal trends \\
+
+\hline
+Total biomass & 0.28 & 0.50 & 141 \\
+Total energy use & 0.24 & 0.31 & 137 \\
+\hline
+\end{tabularx}
+%\end{center}
+
+\end{table}
+
+
+
+\begin{table}[H]
+\caption[A proper table caption location]{ANOVA table comparing ordinary linear models of the form \textit{absolute log ratio = syndrome} and \textit{absolute log ratio = 1}.
+}
+%\begin{center}
+\begin{tabularx}{\textwidth}{XXXXXX}
+\hline Res.Df & RSS & Df & Sum of Sq & F & $Pr(>F)$ \\
+
+\hline
+196 & 5.993024 & NA & NA & NA & NA \\
+198 & 11.105203 & -2 & -5.11218 & 83.59613 & 0 \\
+
+\hline
+\end{tabularx}
+%\end{center}
+
+\end{table}
+
+
+
+\begin{table}[H]
+\caption[A proper table caption location]{Estimates (calculated using \textit{emmeans} \cite{lenth2021}) for the mean absolute log ratio of mean mass for routes whose dynamics for biomass were best-described by different syndromes of change.
+}
+%\begin{center}
+\begin{tabularx}{\textwidth}{XXXXXX}
+\hline categorical fit & emmean & SE & df & lower.CL & upper.CL \\
+\hline
+Coupled trend & 0.2084997 & 0.0188558 & 196 & 0.1713133 & 0.2456861 \\
+Decoupled trends & 0.5779023 & 0.0235784 & 196 & 0.5314024 & 0.6244021 \\
+No trend & 0.2385438 & 0.0229605 & 196 & 0.1932625 & 0.2838251 \\
+
+\hline
+\end{tabularx}
+%\end{center}
+
+\end{table}
+
+
+
+\begin{table}[H]
+\caption[A proper table caption location]{Contrasts for absolute log ratio of mean mass, calculated using \textit{emmeans} \cite{lenth2021}.
+}
+%\begin{center}
+\begin{tabularx}{\textwidth}{XXXXXX}
+\hline contrast & estimate & SE & df & t.ratio & p.value \\
+\hline
+Coupled trend - Decoupled trends & -0.3694026 & 0.0301908 & 196 & -12.235620 & 0.0000000 \\
+Coupled trend - No trend & -0.0300441 & 0.0297107 & 196 & -1.011221 & 0.5706639 \\
+Decoupled trends - No trend & 0.3393585 & 0.0329108 & 196 & 10.311453 & 0.0000000 \\
+
+\hline
+\end{tabularx}
+%\end{center}
+
+\end{table}
+
+
+
+\begin{table}[H]
+\caption[A proper table caption location]{ANOVA table comparing binomial generalized linear models of the form \textit{ISD turnover = syndrome} and \textit{ISD turnover = 1}.
+}
+%\begin{center}
+\begin{tabularx}{\textwidth}{XXXXXX}
+\hline Resid. Df & Resid. Dev & Df & Deviance & $Pr(>Chi)$ \\
+
+\hline
+196 & 4.053082 & NA & NA & NA \\
+198 & 4.253015 & -2 & -0.1999328 & 0.9048678 \\
+
+
+\hline
+\end{tabularx}
+%\end{center}
+
+\end{table}
+
+
+\begin{table}[H]
+\caption[A proper table caption location]{ANOVA table comparing binomial generalized linear models of the form \textit{Bray-Curtis dissimilarity = syndrome} and \textit{Bray-Curtis dissimilarity = 1}.
+}
+%\begin{center}
+\begin{tabularx}{\textwidth}{XXXXXX}
+\hline Resid. Df & Resid. Dev & Df & Deviance & $Pr(>Chi)$ \\
+
+\hline
+196 & 4.455349 & NA & NA & NA \\
+198 & 5.044039 & -2 & -0.5886892 & 0.7450197 \\
+
+\hline
+\end{tabularx}
+%\end{center}
+
+\end{table}
+
+
+\section{Statistical comparisons of distributions in Figure 3-4}
 
 
 %\chapter{Expert Opinions}
