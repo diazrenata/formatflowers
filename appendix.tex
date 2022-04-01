@@ -829,7 +829,7 @@ Comparison & Treatment &	estimate &	SE &	df &	z.ratio &	p.value \\
 \begin{figure}
 \begin{center}
 \addFigure{.6}{./graphics/appendixAF1.png}
-\captionof{figure}[Changes in overall community energy use (A), NDVI (B), and local climate (C) surrounding the 2010 shift in rodent community composition.]{Changes in overall community energy use (A), NDVI (B), and local climate (C) surrounding the 2010 shift in rodent community composition. As documented in \cite{christensen2018}, the 2010 transition followed a period of low abundance community-wide (A) and low plant productivity (B). Since 2010, the site has experienced two periods of drought (C) interspersed with an unusually wet period. Total rodent energy use (A) is calculated as the total energy use of all granviores on control plots ($Etot_C$) in each census period. The anomaly (shown) is calculated as the difference between the total energy use in each census period and the long-term mean of total energy use. Vertical dashed lines mark the dates of major transitions in the rodent community. NDVI anomaly (B) is calculated as the difference between monthly NDVI and the long-term mean for that month. NDVI data were obtained from Landsat 5, 7, and 8 using the \textit{ndvi} function in the R package \textit{portalr} \cite{masek2006, vermote2016, christensen2019a}. Drought (C) was calculated using a 12-month Standardized Precipitation Evapotranspiraiton index (SPEI) for all months from 1989-2020, using the Thornthwaite method to estimate potential evapotranspiration (using the R package \textit{SPEI}; \cite{begueria2017, slette2019, cardenas2021}). Values greater than 0 (blue) indicate wetter than average conditions, and values less than 0 (red) indicate drier conditions. Values between -1 and 1 (horizontal lines) are considered within normal variability for a system, while values $<$ -1 constitute drought \cite{slette2019}.}
+\captionof{figure}[Changes in overall community energy use, NDVI, and local climate, surrounding the 2010 shift in rodent community composition.]{Changes in overall community energy use (A), NDVI (B), and local climate (C) surrounding the 2010 shift in rodent community composition. As documented in \cite{christensen2018}, the 2010 transition followed a period of low abundance community-wide (A) and low plant productivity (B). Since 2010, the site has experienced two periods of drought (C) interspersed with an unusually wet period. Total rodent energy use (A) is calculated as the total energy use of all granviores on control plots ($Etot_C$) in each census period. The anomaly (shown) is calculated as the difference between the total energy use in each census period and the long-term mean of total energy use. Vertical dashed lines mark the dates of major transitions in the rodent community. NDVI anomaly (B) is calculated as the difference between monthly NDVI and the long-term mean for that month. NDVI data were obtained from Landsat 5, 7, and 8 using the \textit{ndvi} function in the R package \textit{portalr} \cite{masek2006, vermote2016, christensen2019a}. Drought (C) was calculated using a 12-month Standardized Precipitation Evapotranspiraiton index (SPEI) for all months from 1989-2020, using the Thornthwaite method to estimate potential evapotranspiration (using the R package \textit{SPEI}; \cite{begueria2017, slette2019, cardenas2021}). Values greater than 0 (blue) indicate wetter than average conditions, and values less than 0 (red) indicate drier conditions. Values between -1 and 1 (horizontal lines) are considered within normal variability for a system, while values $<$ -1 constitute drought \cite{slette2019}.}
 \end{center}
 \end{figure}
 
@@ -867,7 +867,7 @@ Among routes with temporal trends (“coupled trends” or “decoupled trends�
 
 
 \begin{table}[H]
-\caption[A proper table caption location]{The number and proportion of routes whose dynamics for total biomass and total energy use are best described by the following syndromes: no directional change (intercept-only model, \textit{biomass = 1} or \textit{energy use = 1}); a coupled trend (\textit{biomass = year} or \textit{energy use = year}); or a model with decoupled temporal trends for observed and individuals-driven dynamics (\textit{biomass = year * dynamics} or \textit{energy use = year * dynamics}, where \textit{dynamics} refers to observed or null model, individuals-driven dynamics).
+\caption[Complete coverage: Routes with different syndromes of change]{The number and proportion of routes whose dynamics for total biomass and total energy use are best described by the following syndromes: no directional change (intercept-only model, \textit{biomass = 1} or \textit{energy use = 1}); a coupled trend (\textit{biomass = year} or \textit{energy use = year}); or a model with decoupled temporal trends for observed and individuals-driven dynamics (\textit{biomass = year * dynamics} or \textit{energy use = year * dynamics}, where \textit{dynamics} refers to observed or null model, individuals-driven dynamics).
 
 }
 %\begin{center}
@@ -889,7 +889,7 @@ Total energy use & Decoupled trend & 22 & 0.11 \\
 
 
 \begin{table}[H]
-\caption[A proper table caption location]{The proportion of trends that are increasing (specifically, for which the ratio of the last fitted value to the first fitted value > 1) for individuals-driven and observed dynamics, for routes exhibiting temporal trends (“coupled trends” or “decoupled trends”) in total biomass and total energy use. Trends that are not increasing are decreasing.
+\caption[Complete coverage: Proportion of increasing trends]{The proportion of trends that are increasing (specifically, for which the ratio of the last fitted value to the first fitted value > 1) for individuals-driven and observed dynamics, for routes exhibiting temporal trends (“coupled trends” or “decoupled trends”) in total biomass and total energy use. Trends that are not increasing are decreasing.
 }
 %\begin{center}
 \begin{tabularx}{\textwidth}{XXXX}
@@ -907,7 +907,7 @@ Total energy use & 0.24 & 0.31 & 137 \\
 
 
 \begin{table}[H]
-\caption[A proper table caption location]{ANOVA table comparing ordinary linear models of the form \textit{absolute log ratio = syndrome} and \textit{absolute log ratio = 1}.
+\caption[Complete coverage: ANOVA table for absolute log ratio]{ANOVA table comparing ordinary linear models of the form \textit{absolute log ratio = syndrome} and \textit{absolute log ratio = 1}.
 }
 %\begin{center}
 \begin{tabularx}{\textwidth}{XXXXXX}
@@ -926,7 +926,7 @@ Total energy use & 0.24 & 0.31 & 137 \\
 
 
 \begin{table}[H]
-\caption[A proper table caption location]{Estimates (calculated using \textit{emmeans} \cite{lenth2021}) for the mean absolute log ratio of mean mass for routes whose dynamics for biomass were best-described by different syndromes of change.
+\caption[Complete coverage: Estimates for absolute log ratio]{Estimates (calculated using \textit{emmeans} \cite{lenth2021}) for the mean absolute log ratio of mean mass for routes whose dynamics for biomass were best-described by different syndromes of change.
 }
 %\begin{center}
 \begin{tabularx}{\textwidth}{XXXXXX}
@@ -945,7 +945,7 @@ No trend & 0.2385438 & 0.0229605 & 196 & 0.1932625 & 0.2838251 \\
 
 
 \begin{table}[H]
-\caption[A proper table caption location]{Contrasts for absolute log ratio of mean mass, calculated using \textit{emmeans} \cite{lenth2021}.
+\caption[Complete coverage: Contrasts for absolute log ratio]{Contrasts for absolute log ratio of mean mass, calculated using \textit{emmeans} \cite{lenth2021}.
 }
 %\begin{center}
 \begin{tabularx}{\textwidth}{XXXXXX}
@@ -964,7 +964,7 @@ Decoupled trends - No trend & 0.3393585 & 0.0329108 & 196 & 10.311453 & 0.000000
 
 
 \begin{table}[H]
-\caption[A proper table caption location]{ANOVA table comparing binomial generalized linear models of the form \textit{ISD turnover = syndrome} and \textit{ISD turnover = 1}.
+\caption[Complete coverage: ANOVA for ISD turnover]{ANOVA table comparing binomial generalized linear models of the form \textit{ISD turnover = syndrome} and \textit{ISD turnover = 1}.
 }
 %\begin{center}
 \begin{tabularx}{\textwidth}{XXXXXX}
@@ -983,7 +983,7 @@ Decoupled trends - No trend & 0.3393585 & 0.0329108 & 196 & 10.311453 & 0.000000
 
 
 \begin{table}[H]
-\caption[A proper table caption location]{ANOVA table comparing binomial generalized linear models of the form \textit{Bray-Curtis dissimilarity = syndrome} and \textit{Bray-Curtis dissimilarity = 1}.
+\caption[Complete coverage: ANOVA table for Bray-Curtis dissimilarity]{ANOVA table comparing binomial generalized linear models of the form \textit{Bray-Curtis dissimilarity = syndrome} and \textit{Bray-Curtis dissimilarity = 1}.
 }
 %\begin{center}
 \begin{tabularx}{\textwidth}{XXXXXX}
@@ -1004,7 +1004,7 @@ Decoupled trends - No trend & 0.3393585 & 0.0329108 & 196 & 10.311453 & 0.000000
 
 
 \begin{table}[H]
-\caption[A proper table caption location]{ANOVA table comparing ordinary linear models of the form \textit{absolute log ratio = syndrome} and \textit{absolute log ratio = 1}. The fit incorporating syndrome is superior to the intercept-only model ($p < 0.0001$).
+\caption[Main analysis: ANOVA table for absolute log ratio]{ANOVA table comparing ordinary linear models of the form \textit{absolute log ratio = syndrome} and \textit{absolute log ratio = 1}. The fit incorporating syndrome is superior to the intercept-only model ($p < 0.0001$).
 }
 %\begin{center}
 \begin{tabularx}{\textwidth}{XXXXXX}
@@ -1023,7 +1023,7 @@ Decoupled trends - No trend & 0.3393585 & 0.0329108 & 196 & 10.311453 & 0.000000
 
 
 \begin{table}[H]
-\caption[A proper table caption location]{Estimates (calculated using \textit{emmeans} \cite{lenth2021}) for the mean absolute log ratio of mean mass for routes whose dynamics for biomass were best-described by different syndromes of change. Routes with decoupled long-term trends between biomass and individuals-driven dynamics have higher absolute log ratios (mean .56, 95\% credible interval .53-.58) than routes with covarying trends in biomass and individual abundance (mean of .2; 95\% interval .18-.22) or no detectable temporal trend (mean of .22; .2-.24).
+\caption[Main analysis: Estimates for absolute log ratio]{Estimates (calculated using \textit{emmeans} \cite{lenth2021}) for the mean absolute log ratio of mean mass for routes whose dynamics for biomass were best-described by different syndromes of change. Routes with decoupled long-term trends between biomass and individuals-driven dynamics have higher absolute log ratios (mean .56, 95\% credible interval .53-.58) than routes with covarying trends in biomass and individual abundance (mean of .2; 95\% interval .18-.22) or no detectable temporal trend (mean of .22; .2-.24).
 }
 %\begin{center}
 \begin{tabularx}{\textwidth}{XXXXXX}
@@ -1041,7 +1041,7 @@ No trend & 0.2211238 & 0.0108771 & 736 & 0.1997699 & 0.2424777 \\
 
 
 \begin{table}[H]
-\caption[A proper table caption location]{Contrasts for absolute log ratio of mean mass, calculated using \textit{emmeans} \cite{lenth2021}.There is a significant contrast between routes with decoupled trends and the other two syndromes of dynamics (both contrasts, $p < 0.001$), but not between routes showing the “no trend” and “coupled trend” syndromes (contrast $p = .31$).
+\caption[Main analysis: Contrasts for absolute log ratio]{Contrasts for absolute log ratio of mean mass, calculated using \textit{emmeans} \cite{lenth2021}.There is a significant contrast between routes with decoupled trends and the other two syndromes of dynamics (both contrasts, $p < 0.001$), but not between routes showing the “no trend” and “coupled trend” syndromes (contrast $p = .31$).
 }
 %\begin{center}
 \begin{tabularx}{\textwidth}{XXXXXX}
@@ -1059,7 +1059,7 @@ Decoupled trends - No trend & 0.3376437 & 0.0175524 & 736 & 19.236285 & 0.000000
 
 
 \begin{table}[H]
-\caption[A proper table caption location]{ANOVA table comparing binomial generalized linear models of the form \textit{ISD turnover = syndrome} and \textit{ISD turnover = 1}.  The model incorporating syndrome is not superior to the intercept-only model $(p = .9)$.
+\caption[Main analysis: ANOVA table for ISD turnover]{ANOVA table comparing binomial generalized linear models of the form \textit{ISD turnover = syndrome} and \textit{ISD turnover = 1}.  The model incorporating syndrome is not superior to the intercept-only model $(p = .9)$.
 }
 %\begin{center}
 \begin{tabularx}{\textwidth}{XXXXXX}
@@ -1078,7 +1078,7 @@ Decoupled trends - No trend & 0.3376437 & 0.0175524 & 736 & 19.236285 & 0.000000
 
 
 \begin{table}[H]
-\caption[A proper table caption location]{ANOVA table comparing binomial generalized linear models of the form \textit{Bray-Curtis dissimilarity = syndrome} and \textit{Bray-Curtis dissimilarity = 1}. The model incorporating syndrome is not superior to the intercept-only model ($p = .37$).
+\caption[Main analysis: ANOVA table for Bray-Curtis dissimilarity]{ANOVA table comparing binomial generalized linear models of the form \textit{Bray-Curtis dissimilarity = syndrome} and \textit{Bray-Curtis dissimilarity = 1}. The model incorporating syndrome is not superior to the intercept-only model ($p = .37$).
 }
 %\begin{center}
 \begin{tabularx}{\textwidth}{XXXXXX}
