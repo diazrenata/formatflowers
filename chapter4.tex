@@ -2,7 +2,9 @@
 
 \section{Background}
 
-Ecological communities are complex systems made of numerous interacting entities subject to a vast array of processes operating in different contexts and at different scales \cite{levin1992, lawton1999, maurer1999, brown2002, nekola2007, mcgill2019}. One strategy for making sense of this inherent complexity is to identify patterns that occur consistently across many communities, and use these common phenomena to develop and test theories regarding general mechanisms that shape community structure \cite{brown1989, maurer1999, lawton1999, gaston2000, mcgill2019}. Some of these patterns, however, can have counterintuitive emergent statistical properties \cite{frank2009, frank2019}. Left unexamined, these properties can confound the interpretation of the observed patterns: what we interpret to be the result of generative mechanism may be an artifact of statistical constraints. However, when these properties are properly understood and accounted for, they can provide leverage for detecting and identifying the processes at work in a system \cite{jaynes1957, harte2014}.
+\renewcommand*{\thefootnote}{\fnsymbol{footnote}}{\footnote{Reprinted with permission from Renata M. Diaz, Hao Ye, and S. K. Morgan Ernest, "Empirical abundance distributions are
+more uneven than expected given their statistical baseline", \textit{Ecology Letters} 24 (2021),
+no. 9, 2025–2039.} Ecological communities are complex systems made of numerous interacting entities subject to a vast array of processes operating in different contexts and at different scales \cite{levin1992, lawton1999, maurer1999, brown2002, nekola2007, mcgill2019a}. One strategy for making sense of this inherent complexity is to identify patterns that occur consistently across many communities, and use these common phenomena to develop and test theories regarding general mechanisms that shape community structure \cite{brown1989, maurer1999, lawton1999, gastonkevinj2000, mcgill2019a}. Some of these patterns, however, can have counterintuitive emergent statistical properties \cite{frank2009, frank2019}. Left unexamined, these properties can confound the interpretation of the observed patterns: what we interpret to be the result of generative mechanism may be an artifact of statistical constraints. However, when these properties are properly understood and accounted for, they can provide leverage for detecting and identifying the processes at work in a system \cite{jaynes1957, harte2014}.
 
 The species abundance distribution (SAD) – the distribution of how all of the individuals in a community are divided among the species in that community –  is a prime example of an ecological pattern that is both commonly invoked in the search for general processes, and subject to statistical constraints that have thus far complicated efforts to use it in this way \cite{nekola2007, mcgill2007, locey2013}. The shape of the SAD is so consistent that it is often considered an ecological law \cite{preston1948, preston1962, preston1962a, preston1980, mcgill2003, mcgill2007}. Across varied ecosystems and taxa, the species abundance distribution is dominated by a few very abundant species and a larger number of increasingly rare species, generating a distinctive hollow- or J-shaped curve when plotted with species rank on the x-axis and abundance on the y-axis \cite{fisher1943, mcgill2007}. Community ecologists have used the SAD to test numerous theories regarding which biological processes are most important for structuring assemblages of species, by comparing theoretical predictions for the SAD to observed SADs \cite{mcgill2003, mcgill2007}. However, this approach has proven inconclusive because many theories predict similar shapes for the SAD \cite{mcgill2003, mcgill2007}, and even experimental manipulations generate little variation in the shape of the SAD \cite{supp2014}. Investigating and accounting for the statistical considerations that constrain the shape of the SAD may open up new avenues for ecological interpretations of the SAD.
 
@@ -92,6 +94,77 @@ It is also important to recognize that there are multiple plausible approaches t
 
 Our study demonstrates the utility, and the potential challenges, of applying tools from the study of complex systems and statistical mechanics to the study of ecological communities \cite{haegeman2008, harte2011, white2012, harte2014}. While concepts such as maximum entropy and the feasible set are promising horizons for macroecology, the small size of some ecological communities may present difficulties that are rare in the domains for which these tools were originally developed \cite{jaynes1957, haegeman2008}. When the observed numbers of species and individuals are too small to generate highly resolved statistical baselines, these approaches will be less informative than we might hope – as appears to be the case for the smallest communities in our analysis. In larger communities, where mathematical constraints have more resolved effects on the form of the SAD, our results show that these constraints alone do not fully account for the extremely uneven SADs we often observe in nature – leaving an important role for ecological processes. This ability to detect and diagnose the specific ways in which empirical SADs deviate from randomness can generate new avenues for understanding how and when biological drivers affect the SAD. There are, of course, still many elements to be improved in our ability to distinguish biological signal from randomness, including assessing alternative statistical baselines and calibrating our expected power to detect deviations, especially for small communities. Indeed, more sensitive metrics could also enable identification of processes that operate through time. Continuing to explore and account for the interplay between statistical constraint and biological process constitutes a promising and profound new approach to our understanding of this familiar, yet surprisingly mysterious, ecological pattern. 
 
-\section{Figures}
+\section{Figures for Chapter 4}
 
-\section{Tables}
+
+
+\begin{figure}[H]
+\begin{center}
+\addFigure{.6}{./graphics/figure4pt1.png} 
+\captionof{figure}[Communities in S and N space]{Distribution of communities from each dataset in terms of total abundance (N) and species richness (S). Communities range from few species and individuals (lower left corner) to speciose communities with many individuals (upper right). However, datasets are not evenly distributed across this state space due to differences in their sampling intensity, design, and underlying biology (e.g. productivity, regional richness, taxonomic group, or other factors that influence the capacity of a community to support large numbers of species and individuals). In particular, note that the FIA dataset comprises very small communities, and communities from the Gentry dataset are extreme in both their high species richness and low average abundance.}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[H]
+\begin{center}
+\addFigure{.7}{./graphics/figure4pt2.png} 
+\captionof{figure}[Illustration of the breadth index]{Large feasible sets may allow better detection of deviations from the statistical baseline by generating more specific, narrowly-defined baselines. We illustrate this phenomenon using 3 hypothetical communities: a small community (S = 4, N = 34; top row), an intermediate community (S = 13, N = 315; middle row), and a large community (S= 44, N = 13360; bottom row). The large communiity has approximately 6.59e+70 possible SADs in its feasible set, while the intermediate community has 1.001e+12 and the small community has only 297. For every SAD sampled from the feasible set (left column), we calculate the skewness (color scale) or other summary metrics (not shown). The distributions of these values (right column) constitute the statistical baseline. We define a “breadth index” as the ratio of the range encompassed in the two-tailed 95\% density interval (distance between red lines, right), compared to the full range of values for the statistic (distance between the maximum and minimum values). As S and N increase, the size of the feasible set increases, resulting in a narrower statistical baseline (smaller breadth index) – thus enabling easier detection of deviations that may be the result of ecological processes affecting the SAD.}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[H]
+\begin{center}
+\addFigure{.8}{./graphics/figure4pt3.png} 
+\captionof{figure}[Histograms of percentile scores]{Many ecological communities are highly unusual compared to their statistical baselines. Percentile ranks are calculated by comparing each community to its sampled feasible set, with very high or very low percentile ranks reflecting extreme values relative to statistical baselines. The vertical red lines mark the 95th percentile for the dissimilarity to the central tendency, and the 2.5th and 97.5th percentiles for all other metrics. Species abundance distributions that are sampled at random from the feasible set will produce percentile ranks that are roughly uniformly distributed from 0 to 100, with approximately 5\% of values above the 95th percentile or 2.5\% of values above and below the 2.5th and 97.5th percentiles, respectively. In contrast, most datasets have more communities that are highly skewed or uneven than would be expected by chance. The percentile values shown are the mean of the percentile scores defined as the proportion of comparison values $<=$, and $<$, the focal value. In calculating the proportion of sites with extreme values, the $<=$ designation gives an appropriately conservative estimate of the proportion of high values, but overestimates the proportion of very low values, and the reverse occurs for the $<$ designation. }
+\end{center}
+\end{figure}
+
+
+\begin{figure}[H]
+\begin{center}
+\addFigure{.4}{./graphics/figure4pt4.png} 
+\captionof{figure}[The variability of the feasible set]{The variability of the feasible set, defined as either the 95th percentile of dissimilarity scores comparing elements of a feasible set to the central tendency of that feasible set, or via a breadth index (see Figure 4-2), decreases as the number of possible SADs in the feasible set becomes very large. Highly variable feasible sets constitute broad, poorly-defined statistical baselines that may impede our ability to confidently detect deviations between observations and what is expected given the baseline. Small feasible sets, which occur for small combinations of S and N, are often highly variable. The majority of these small, highly variable feasible sets occur for communities in the FIA and Mammal Community databases. Although the Gentry dataset also contains communities with small feasible sets, these communities also have a very low ratio of N to S, meaning their entire feasible sets may be constrained to be more self-similar than small feasible sets in general (see Dissimilarity to central tendency). There is, however, substantial additional variation in the dissimilarity and breadth indices not accounted for by the size of the feasible set or the ratio of N to S.}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[H]
+\begin{center}
+\addFigure{.8}{./graphics/figure4pt5.png} 
+\captionof{figure}[Effects of resampling]{Summaries of how resampling to adjust for under-detection of rare species (orange) and subsampling (pink) change the proportion of extreme values observed for each metric and dataset. The horizontal black lines mark the approximate proportions of extreme values that would be expected at random: 5\% for dissimilarity to the central tendency, and 2.5\% for all other metrics. Adjusting for rare species consistently increases the proportion of extreme values relative to the raw SADs, while subsampling often decreases it but generally does not eliminate or change the direction of the effect. The exception is for the FIA dataset, which does not show strong deviations for either raw or resampled SADs. Shown are the effects and directions observed for most datasets; for complete results of resampling, including the opposite direction effects, see \hyperlink{https://doi.org/10.5281/zenodo.4744720}{https://doi.org/10.5281/zenodo.4744720}.}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[H]
+\begin{center}
+\addFigure{.8}{./graphics/figure4pt6.png} 
+\captionof{figure}[Very small communities]{Very small communities (e.g. those with fewer than 2000 possible SADs in the feasible set; upper rows) exhibit more variable, broadly-defined statistical baselines (top) and less consistently extreme observed values relative to their feasible sets (bottom). 2000 possible SADs is used as a cutoff because it allows for a comparison using a substantial number of communities from the FIA and two other datasets. Of these datasets, the FIA is the most dominated by very small communities (68\% of FIA sites have fewer than 2000 possible SADs, compared to 34\% for the Mammal Community and 7\% for the Miscellaneous Abundance databases). Results shown are for skewness; for complete results see \hyperlink{https://doi.org/10.5281/zenodo.4744720}{https://doi.org/10.5281/zenodo.4744720}.}
+\end{center}
+\end{figure}
+
+\section{Tables for Chapter 4}
+
+\begin{table}[H]
+\caption[Proportions of unusual percentile scores]{
+Proportions of extreme values for percentile scores for observed SADs compared to samples from the feasible set. For dissimilarity, this is the proportion of percentile scores $>$95; by chance, 5\% of scores should be in this extreme. For all other metrics, this is the proportion $<$2.5 or $>$97.5; by chance 2.5\% of scores should be in either extreme. $n$ refers to the number of communities included for each dataset for each metric. The proportions shown are for the directions of effects observed for most datasets; for the opposite-direction effects, see \hyperlink{https://doi.org/10.5281/zenodo.4744720}{https://doi.org/10.5281/zenodo.4744720}.
+}
+%\begin{center}
+\begin{tabularx}{\textwidth}{XXXXXX}
+\hline Dataset & High dissimilarity & High proportion of rare species & High skew & Low Simpson & Low Shannon \\
+\hline
+
+Breeding Bird Survey & 23\%; n = 2773 & 4.5\%; n = 2773 & 9\%; n = 2773 & 21\%; n = 2773 & 23\%; n = 2773 \\
+FIA & 7.2\%; n = 18447 & 1.4\%; n = 17410 & 2.8\%; n = 17410 & 5.8\%; n = 17410 & 5.5\%; n = 17410 \\
+Gentry & 34\%; n = 224 & 0.9\%; n = 223 & 11\%; n = 223 & 9.9\%; n = 223 & 7.6\%; n = 223 \\
+Mammal Communities & 32\%; n = 552 & 13\%; n = 511 & 12\%; n = 505 & 28\%; n = 511 & 30\%; n = 511 \\
+Misc. Abundance & 59\%; n = 494 & 27\%; n = 486 & 27\%; n = 484 & 53\%; n = 486 & 56\%; n = 486 \\
+
+
+\hline
+\end{tabularx}
+%\end{center}
+
+\end{table}
