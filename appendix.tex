@@ -1,6 +1,6 @@
 \chapter{Supplemental results and analyses for Chapter 2}
 
-\section{Plot-level analysis}
+\section{Plot Level Analysis}
 
 \subsection{Explanation}
 In order to calculate energetic compensation and the total energy ratio, we require an estimate for the baseline values of total energy use, kangaroo rat energy use, and small granivore energy use on control plots. Estimating these baselines requires aggregating over between-plot variability among the control plots. For consistency, in the main analysis, we also aggregate across the exclosure plots and focus on treatment-level means throughout. Here, we explore the effect of between-plot variability on our analyses, to the extent possible. We used treatment-level means across control plots to calculate energetic compensation and the total energy ratio, but calculated these quantities separately for each exclosure plot, and conducted analyses including a random effect of plot. We also conducted analyses of Dipodomys and C. baileyi proportional energy use using plot-level data, again including plot as a random effect. Results were qualitatively the same as using treatment-level means.
@@ -10,21 +10,21 @@ In order to calculate energetic compensation and the total energy ratio, we requ
 
 We fit linear mixed-effects models (using the $lme$ function in the R package $nlme$; \cite{pinheiro2020}) of the form $compensation = time period$ with a random effect of plot and temporal autocorrelation structure to account for autocorrelation between monthly census periods within each time period. We compared these to models without the autocorrelation structure, without the random effect, and without the term for time period. The best-fitting model included terms for time period, random effect of plot, and autocorrelation.
 
-\subsection{Total energy use}
+\subsection{Total Energy Use}
 
 
 As for compensation, we fit linear mixed-effects models fitting \textit{total energy ratio = time period} with a random effect of plot and a temporal autocorrelation term to account for autocorrelation between monthly census periods within each timeperiod. We compared these to models without the autocorrelation term, without the random effect, and without the term for time period. The best-fitting model included terms for time period, random effect of plot, and autocorrelation.
 
 
 
-\subsection{\textit{Dipodomys} proportional energy use}
+\subsection{\textit{Dipodomys} Proportional Energy Use}
 
 
 To compare proportional energy use across time periods, we used binomial generalized linear mixed models (using the glmer function in the R package \textit{lme4}; Bates (2015)), which allowed us to include a random effect of plot.
 
 For \textit{Dipodomys} proportional energy use, we compared models with and without the random effect of plot and with and without a term for timeperiod. The best-fitting model included terms for timeperiod and a random effect of plot.
 
-\subsection{\textit{C. baileyi} proportional energy use}
+\subsection{\textit{C. baileyi} Proportional Energy Use}
 
 As for kangaroo rat proportional energy use, we used a binomial generalized linear mixed effects model to compare \textit{C. baileyi} proportional energy use across time periods. Because \textit{C. baileyi} occurs on both control and exclosure plots, we investigated whether the dynamics of \textit{C. baileyi}’s proportional energy use differed between treatment types. We compared models incorporating separate slopes, separate intercepts, or no terms for treatment modulating the change in \textit{C. baileyi} proportional energy use across time periods, i.e. comparing the full set of models:
 
@@ -284,24 +284,24 @@ Comparison & Treatment &	estimate &	SE &	df &	z.ratio &	p.value \\
  \end{tabularx}
 \end{table}
 
-\section{Full model results}
+\section{Full Model Results}
 
 \subsection{Compensation}
 
 We fit a generalized least squares (of the form $compensation = timeperiod$; note that “timeperiod” is coded as “oera” throughout) using the $gls$ function from the R package $nlme$ \cite{pinheiro2020}. Because values from monthly censuses within each time period are subject to temporal autocorrelation, we included a continuous autoregressive temporal autocorrelation structure of order 1 (using the $CORCAR1$ function). We compared this model to models fit without the autocorrelation structure and without the time period term using AIC. The model with both the time period term and the autocorrelation structure was the best-fitting model via AIC, and we used this model to calculate estimates and contrasts using the package \textit{emmeans} \cite{lenth2021}.
 
-\subsection{Total energy use ratio}
+\subsection{Total Energy Use Ratio}
 
 As for compensation, we fit a generalized least squares of the form \textit{total energy ratio = timeperiod}, accounting for temporal autocorrelation between monthly censuses within each time period using a continuous autoregressive autocorrelation structure of order 1. We compared this model to models fit without the timeperiod term and/or autocorrelation structure, and found the full (timeperiod plus autocorrelation) model had the best performance via AIC. We used this model for estimates and contrasts.
 
-\subsection{\textit{Dipodomys} proportional energy use}
+\subsection{\textit{Dipodomys} Proportional Energy Use}
 
 
 Proportional energy use is bounded 0-1 and cannot be fit with generalized least squares. We therefore used a binomial generalized linear model of the form \textit{Dipodomys proportional energy use = timeperiod}. We compared a model fit with a timeperiod term to an intercept-only (null) model using AIC, and found the timeperiod term improved model fit. We used this model for estimates and contrasts.
 
 Note that we were unable to incorporate temporal autocorrelation into generalized linear models, and we prioritized fitting models of the appropirate family over accounting for autocorrelation. Due to the pronounced differences between time periods for these variables, we were comfortable proceeding without explicitly accounting for autocorrelation.
 
-\subsection{\textit{C. baileyi} proportional energy use}
+\subsection{\textit{C. baileyi} Proportional Energy Use}
 
 
 As for kangaroo rat proportional energy use, we used a binomial generalized linear model to compare \textit{C. baileyi} proportional energy use across time periods. Because \textit{C. baileyi} occurs on both control and exclosure plots, we investigated whether the dynamics of \textit{C. baileyi}’s proportional energy use differed between treatment types. We compared models incorporating separate slopes, separate intercepts, or no terms for treatment modulating the change in \textit{C. baileyi} proportional energy use across time periods, i.e. comparing the full set of models:
@@ -554,24 +554,24 @@ Comparison & Treatment &	estimate &	SE &	df &	z.ratio &	p.value \\
 \end{table}
 
 
-\section{Biomass analysis}
+\section{Biomass Analysis}
 
 \subsection{Compensation}
 
 We fit a generalized least squares (of the form $compensation = timeperiod$; note that “timeperiod” is coded as “oera” throughout) using the $gls$ function from the R package $nlme$ \cite{pinheiro2020}. Because values from monthly censuses within each time period are subject to temporal autocorrelation, we included a continuous autoregressive temporal autocorrelation structure of order 1 (using the $CORCAR1$ function). We compared this model to models fit without the autocorrelation structure and without the time period term using AIC. The model with both the time period term and the autocorrelation structure was the best-fitting model via AIC, and we used this model to calculate estimates and contrasts using the package \textit{emmeans} \cite{lenth2021}.
 
-\subsection{Total biomass ratio}
+\subsection{Total Biomass Ratio}
 
 As for compensation, we fit a generalized least squares of the form \textit{total energy ratio = timeperiod}, accounting for temporal autocorrelation between monthly censuses within each time period using a continuous autoregressive autocorrelation structure of order 1. We compared this model to models fit without the timeperiod term and/or autocorrelation structure, and found the full (timeperiod plus autocorrelation) model had the best performance via AIC. We used this model for estimates and contrasts.
 
-\subsection{\textit{Dipodomys} proportional biomass}
+\subsection{\textit{Dipodomys} Proportional Biomass}
 
 
 Proportional biomass is bounded 0-1 and cannot be fit with generalized least squares. We therefore used a binomial generalized linear model of the form \textit{Dipodomys proportional biomass = timeperiod}. We compared a model fit with a timeperiod term to an intercept-only (null) model using AIC, and found the timeperiod term improved model fit. We used this model for estimates and contrasts.
 
 Note that we were unable to incorporate temporal autocorrelation into generalized linear models, and we prioritized fitting models of the appropirate family over accounting for autocorrelation. Due to the pronounced differences between time periods for these variables, we were comfortable proceeding without explicitly accounting for autocorrelation.
 
-\subsection{\textit{C. baileyi} proportional biomass}
+\subsection{\textit{C. baileyi} Proportional Biomass}
 
 
 As for kangaroo rat proportional biomass, we used a binomial generalized linear model to compare \textit{C. baileyi} proportional biomass across time periods. Because \textit{C. baileyi} occurs on both control and exclosure plots, we investigated whether the dynamics of \textit{C. baileyi}’s proportional biomass differed between treatment types. We compared models incorporating separate slopes, separate intercepts, or no terms for treatment modulating the change in \textit{C. baileyi} proportional biomass across time periods, i.e. comparing the full set of models:
@@ -822,7 +822,7 @@ Comparison & Treatment &	estimate &	SE &	df &	z.ratio &	p.value \\
 \end{tabularx}
 \end{table}
 
-\section{Covariates of rodent community change}
+\section{Covariates of Rodent Community Change}
 
 
 
@@ -836,7 +836,7 @@ Comparison & Treatment &	estimate &	SE &	df &	z.ratio &	p.value \\
 
 \chapter{Supplemental figures and tables for Chapter 3}
 
-\section{Results for routes with complete temporal sampling}
+\section{Results for Routes with Complete Temporal Sampling}
 
 Figures and tables from the main analysis, restricted to 199 routes with perfect temporal coverage (i.e. no missing time steps). All results are qualitatively the same as for the main analysis (739 routes, with a minimum of 27 of 30 time steps sampled for each route).
 
@@ -1000,7 +1000,7 @@ Decoupled trends - No trend & 0.3393585 & 0.0329108 & 196 & 10.311453 & 0.000000
 \end{table}
 
 
-\section{Statistical comparisons of distributions in Figure 3-4}
+\section{Statistical Comparisons of Distributions in Figure 3-4}
 
 
 \begin{table}[H]
